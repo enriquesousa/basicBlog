@@ -11,25 +11,21 @@
                         <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="logo-sm" height="22">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{ asset('backend/assets/images/logo-dark.png') }}" alt="logo-dark"
-                            height="20">
+                        <img src="{{ asset('backend/assets/images/logo-dark.png') }}" alt="logo-dark" height="20">
                     </span>
                 </a>
 
                 <a href="index.html" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="logo-sm-light"
-                            height="22">
+                        <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="logo-sm-light" height="22">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{ asset('backend/assets/images/logo-light.png') }}" alt="logo-light"
-                            height="20">
+                        <img src="{{ asset('backend/assets/images/logo-light.png') }}" alt="logo-light" height="20">
                     </span>
                 </a>
             </div>
 
-            <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect"
-                id="vertical-menu-btn">
+            <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect" id="vertical-menu-btn">
                 <i class="ri-menu-2-line align-middle"></i>
             </button>
 
@@ -181,9 +177,8 @@
 
             <!-- SEARCH para ventana móvil -->
             <div class="dropdown d-inline-block d-lg-none ms-2">
-                <button type="button" class="btn header-item noti-icon waves-effect"
-                    id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
+                <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown"
+                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="ri-search-line"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
@@ -207,8 +202,8 @@
             <div class="dropdown d-none d-sm-inline-block">
                 <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
-                    <img class="" src="{{ asset('backend/assets/images/flags/us.jpg') }}"
-                        alt="Header Language" height="16">
+                    <img class="" src="{{ asset('backend/assets/images/flags/us.jpg') }}" alt="Header Language"
+                        height="16">
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
 
@@ -249,8 +244,7 @@
                         <div class="row g-0">
                             <div class="col">
                                 <a class="dropdown-icon-item" href="#">
-                                    <img src="{{ asset('backend/assets/images/brands/github.png') }}"
-                                        alt="Github">
+                                    <img src="{{ asset('backend/assets/images/brands/github.png') }}" alt="Github">
                                     <span>GitHub</span>
                                 </a>
                             </div>
@@ -287,8 +281,7 @@
                             </div>
                             <div class="col">
                                 <a class="dropdown-icon-item" href="#">
-                                    <img src="{{ asset('backend/assets/images/brands/slack.png') }}"
-                                        alt="slack">
+                                    <img src="{{ asset('backend/assets/images/brands/slack.png') }}" alt="slack">
                                     <span>Slack</span>
                                 </a>
                             </div>
@@ -415,8 +408,10 @@
                     <a class="dropdown-item" href="#"><i class="ri-lock-unlock-line align-middle me-1"></i>
                         Lock screen</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item text-danger" href="#"><i
-                            class="ri-shut-down-line align-middle me-1 text-danger"></i> Logout</a>
+
+                    <a class="dropdown-item text-danger" href="{{ route('admin.logout') }}">
+                        <i class="ri-shut-down-line align-middle me-1 text-danger"></i>
+                        Salir</a>
                 </div>
             </div>
 
@@ -431,5 +426,3 @@
 
     </div>
 </header>
-
-

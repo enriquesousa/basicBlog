@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\AdminController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,3 +31,10 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::controller(AdminController::class)->group(function () {
+
+    Route::get('/admin/logout', 'AdminDestroy')->name('admin.logout');
+    
+});
+
