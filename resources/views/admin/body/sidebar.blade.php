@@ -1,8 +1,6 @@
 {{-- Left Sidebar Start --}}
 <div class="vertical-menu">
-
     <div data-simplebar class="h-100">
-
         <!-- User details -->
         <div class="user-profile text-center mt-3">
             <div class="">
@@ -18,10 +16,14 @@
 
         <!--- Sidemenu -->
         <div id="sidebar-menu">
+
             <!-- Left Menu Start -->
             <ul class="metismenu list-unstyled" id="side-menu">
+
+                <!-- * MENU -->
                 <li class="menu-title">Menu</li>
 
+                <!-- Dashboard -->
                 <li>
                     <a href="index.html" class="waves-effect">
                         <i class="ri-dashboard-line"></i><span
@@ -30,6 +32,7 @@
                     </a>
                 </li>
 
+                <!-- Calendar -->
                 <li>
                     <a href="calendar.html" class=" waves-effect">
                         <i class="ri-calendar-2-line"></i>
@@ -37,6 +40,7 @@
                     </a>
                 </li>
 
+                <!-- Email -->
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
@@ -48,6 +52,7 @@
                     </ul>
                 </li>
 
+                <!-- Layouts -->
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-layout-3-line"></i>
@@ -79,8 +84,10 @@
                     </ul>
                 </li>
 
+                <!-- * PAGES -->
                 <li class="menu-title">Pages</li>
 
+                <!-- Authentication -->
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-account-circle-line"></i>
@@ -94,6 +101,7 @@
                     </ul>
                 </li>
 
+                <!-- Utility -->
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-profile-line"></i>
@@ -109,8 +117,10 @@
                     </ul>
                 </li>
 
+                <!-- * COMPONENTS -->
                 <li class="menu-title">Components</li>
 
+                <!-- Elements -->
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-pencil-ruler-2-line"></i>
@@ -136,6 +146,7 @@
                     </ul>
                 </li>
 
+                <!-- Advanced UI -->
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-vip-crown-2-line"></i>
@@ -151,6 +162,7 @@
                     </ul>
                 </li>
 
+                <!-- Forms -->
                 <li>
                     <a href="javascript: void(0);" class="waves-effect">
                         <i class="ri-eraser-fill"></i>
@@ -169,6 +181,7 @@
                     </ul>
                 </li>
 
+                <!-- Tables -->
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-table-2"></i>
@@ -182,6 +195,7 @@
                     </ul>
                 </li>
 
+                <!-- Charts -->
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-bar-chart-line"></i>
@@ -196,6 +210,7 @@
                     </ul>
                 </li>
 
+                <!-- Icons -->
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-brush-line"></i>
@@ -209,6 +224,7 @@
                     </ul>
                 </li>
 
+                <!-- Maps -->
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-map-pin-line"></i>
@@ -220,6 +236,7 @@
                     </ul>
                 </li>
 
+                <!-- Multi Level -->
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-share-line"></i>
@@ -237,8 +254,10 @@
                 </li>
 
             </ul>
+
         </div>
         <!-- Sidebar -->
     </div>
 </div>
 <!-- Left Sidebar End -->
+
