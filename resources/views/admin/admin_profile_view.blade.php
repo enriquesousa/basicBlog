@@ -8,7 +8,6 @@
 
             {{-- Columna 1 --}}
             <div class="col-lg-4">
-
                 <div class="card">
 
                     <center>
@@ -26,8 +25,11 @@
                             {{-- Nombre de Admin --}}
                             <h4 class="mb-0">{{ $adminData->name }}</h4>
                             <p class="text-muted">{{ $adminData->email }}</p>
-    
-                            <button type="button" class="btn btn-success btn-xs waves-effect mb-2 waves-light">Editar Perfil</button>
+                            
+                            <a href="{{ route('admin.edit.profile') }}">
+                                <button type="button" class="btn btn-success btn-xs waves-effect mb-2 waves-light">Editar Perfil</button>
+                            </a>
+
                             <button type="button" class="btn btn-danger btn-xs waves-effect mb-2 waves-light">Message</button>
     
                             {{-- <div class="text-start mt-3"> --}}
@@ -44,9 +46,8 @@
                         </center>
 
                     </div>
-
+                    
                 </div>
-
             </div>
             
 

@@ -387,18 +387,24 @@
                 </div>
             </div>
 
+            {{-- PERFIL - Código para poder traer datos del usuario para desplegar foto de perfil y nombre de usuario --}}
+            @php
+                $id = Auth::user()->id;
+                $adminData = App\Models\User::find($id);
+            @endphp
+            
             <!-- Perfil de usuario -->
             <div class="dropdown d-inline-block user-dropdown">
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img class="rounded-circle header-profile-user"
                         src="{{ asset('backend/assets/images/users/avatar-1.jpg') }}" alt="Header Avatar">
-                    <span class="d-none d-xl-inline-block ms-1">Julia</span>
+                    <span class="d-none d-xl-inline-block ms-1">{{ $adminData->username }}</span>
                     <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                     <!-- item-->
-                    <a class="dropdown-item" href="{{ route('admin.profile') }}"><i class="ri-user-line align-middle me-1"></i> Perfil</a>
+                    <a class="dropdown-item" href="{{ route('admin.view.profile') }}"><i class="ri-user-line align-middle me-1"></i> Perfil</a>
                     <a class="dropdown-item" href="#"><i class="ri-wallet-2-line align-middle me-1"></i> Mi Cuenta</a>
                     <a class="dropdown-item d-block" href="#">
                             <span class="badge bg-success float-end mt-1">11</span>
