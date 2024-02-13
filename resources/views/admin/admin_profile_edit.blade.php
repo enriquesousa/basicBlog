@@ -1,5 +1,9 @@
 @extends('admin.admin_master')
 @section('admin')
+
+{{-- Jquery CDN Para poder usar JS --}}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <div class="page-content">
         <div class="container-fluid">
 
@@ -41,6 +45,7 @@
                                     </div>
                                 </div>
 
+                                
                                 {{-- Seleccionar Imagen --}}
                                 <div class="row mb-3">
                                     <label for="email" class="col-sm-2 col-form-label">Seleccionar Imagen</label>
@@ -49,12 +54,11 @@
                                     </div>
                                 </div>
 
-
                                 {{-- Display Image --}}
                                 <div class="row mb-3">
                                     <label for="email" class="col-sm-2 col-form-label"></label>
                                     <div class="col-sm-10">
-                                        <img class="rounded avatar-lg" alt="200x200"
+                                        <img id="showImage" class="rounded avatar-lg" alt="200x200"
                                             src="{{ asset('backend/assets/images/users/avatar-4.jpg') }}"
                                             data-holder-rendered="true">
                                     </div>
@@ -76,17 +80,20 @@
         </div>
     </div>
 
+
     {{-- JS para el manejo de imagenes --}}
-    {{-- <script type="text/javascript">
+    <script type="text/javascript">
 	
-	$(document).ready(function(){
-		$('#image').change(function(e){
-			var reader = new FileReader();
-			reader.onload =  function(e){
-				$('#showImage').attr('src',e.target.result);
-			}
-			reader.readAsDataURL(e.target.files['0']);
-		});
-	}); --}}
+        $(document).ready(function(){
+            $('#image').change(function(e){
+                var reader = new FileReader();
+                reader.onload =  function(e){
+                    $('#showImage').attr('src',e.target.result);
+                }
+                reader.readAsDataURL(e.target.files['0']);
+            });
+        });
+
     </script>
+
 @endsection
