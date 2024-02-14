@@ -11,9 +11,12 @@
                 <div class="card">
 
                     <center>
-                        <img class="rounded-circle avatar-xl mt-4" alt="200x200" 
-                            src="{{ asset('backend/assets/images/users/avatar-4.jpg') }}" 
+
+                        {{-- Imagen de Admin --}}
+                        <img class="rounded-circle avatar-xl mt-4" 
+                            src="{{ (!empty($adminData->profile_image) ? url('upload/admin_images/'.$adminData->profile_image) : url('upload/no_image.jpg')) }}" 
                             data-holder-rendered="true">
+
                     </center>
 
                     <div class="card-body">

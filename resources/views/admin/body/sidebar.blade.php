@@ -1,16 +1,23 @@
 {{-- Left Sidebar Start --}}
 <div class="vertical-menu">
     <div data-simplebar class="h-100">
+
+        {{-- Código para poder traer datos del usuario para desplegar foto de perfil y nombre de usuario --}}
+        @php
+            $id = Auth::user()->id;
+            $adminData = App\Models\User::find($id);
+        @endphp
+
         <!-- User details -->
         <div class="user-profile text-center mt-3">
             <div class="">
-                <img src="{{ asset('backend/assets/images/users/avatar-1.jpg') }}" alt=""
+                <img src="{{ (!empty($adminData->profile_image) ? url('upload/admin_images/'.$adminData->profile_image) : url('upload/no_image.jpg')) }}" alt=""
                     class="avatar-md rounded-circle">
             </div>
             <div class="mt-3">
-                <h4 class="font-size-16 mb-1">Julia Hudda</h4>
+                <h4 class="font-size-16 mb-1">{{ $adminData->name }}</h4>
                 <span class="text-muted"><i class="ri-record-circle-line align-middle font-size-14 text-success"></i>
-                    Online</span>
+                    En Linea</span>
             </div>
         </div>
 
