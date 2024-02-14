@@ -17,13 +17,12 @@ class AdminController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        // $notification = array(
-        //     'message' => 'Admin desconectado con éxito',
-        //     'alert-type' => 'info'
-        // );
+        $notification = array(
+            'message' => 'Usuario deslogueado correctamente',
+            'alert-type' => 'success'
+        );
 
-        return redirect('/login'); //home page
-        // return redirect('/logout')->with($notification); //login page
+        return redirect('/login')->with($notification); 
     }
 
     // AdminProfile

@@ -156,7 +156,6 @@
 
     {{-- Toastr Code toster --}}
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-
     <script>
         @if (Session::has('message'))
 
