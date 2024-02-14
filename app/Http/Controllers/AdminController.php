@@ -40,5 +40,33 @@ class AdminController extends Controller
         return view('admin.admin_profile_edit', compact('editData'));
     }
 
+    // StoreProfile
+    public function StoreProfile(Request $request){
+        
+        // Para saber que usuario esta logueado
+        $id = Auth::user()->id;
+        $data = User::find($id);
+
+        $data->name = $request->name;
+        $data->username = $request->username;
+        $data->email = $request->email;
+
+        // actualizar imagen
+        if ($request->file('profile_image')) {
+            $file = $request->file('profile_image');
+            @unlink(public_path('upload/admin_images/' . $data->profile_image)); // para borrar si ya hay imagen en el directorio
+            $filename = date('YmdHi') . $file->getClientOriginalName();
+            $file->move(public_path('upload/admin_images'), $filename);
+            $data['profile_image'] = $filename;
+        }
+
+        $data->save();
+        
+        return redirect()->route('admin.view.profile')->with('success', 'Perfil actualizado con éxito');
+
+    }
+
+
+
 
 }

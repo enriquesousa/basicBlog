@@ -16,7 +16,8 @@
 
                             <h4 class="card-title">Editar Perfil</h4>
 
-                            <form action="">
+                            <form method="POST" action="{{ route('admin.store.profile') }}" enctype="multipart/form-data">
+                                @csrf
 
                                 {{-- Nombre --}}
                                 <div class="row mb-3">
