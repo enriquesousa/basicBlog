@@ -405,7 +405,7 @@
                 <div class="dropdown-menu dropdown-menu-end">
                     <!-- item-->
                     <a class="dropdown-item" href="{{ route('admin.view.profile') }}"><i class="ri-user-line align-middle me-1"></i> Perfil</a>
-                    <a class="dropdown-item" href="#"><i class="ri-wallet-2-line align-middle me-1"></i> Mi Cuenta</a>
+                    <a class="dropdown-item" href="{{ route('admin.change.password') }}"><i class="ri-wallet-2-line align-middle me-1"></i> Cambiar contraseña</a>
                     <a class="dropdown-item d-block" href="#">
                             <span class="badge bg-success float-end mt-1">11</span>
                             <i class="ri-settings-2-line align-middle me-1"></i> Settings</a>
