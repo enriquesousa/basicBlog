@@ -62,7 +62,15 @@ class AdminController extends Controller
 
         $data->save();
         
-        return redirect()->route('admin.view.profile')->with('success', 'Perfil actualizado con éxito');
+        // return redirect()->route('admin.view.profile')->with('success', 'Perfil actualizado con éxito');
+
+        // toastr notification
+        $notification = array(
+            'message' => 'Perfil actualizado con éxito',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('admin.view.profile')->with($notification);
 
     }
 
