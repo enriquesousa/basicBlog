@@ -15,6 +15,22 @@
 
                             <h4 class="mb-4">Cambiar Contraseña</h4>
 
+
+                            {{-- Si hay errores de validación --}}
+                            @if (count($errors) > 0)
+                                @foreach ($errors->all() as $error)
+
+                                    {{-- <p class="alert alert-danger alert-dismissible fade show">{{ $error }}</p> --}}
+
+                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                        {{ $error }}
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+
+                                @endforeach
+                            @endif
+
+
                             <form method="POST" action="{{ route('admin.update.password') }}">
                                 @csrf
 
@@ -22,14 +38,7 @@
                                 <div class="row mb-3">
                                     <label for="name" class="col-sm-2 col-form-label">Contraseña Antigua</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control @error('oldPassword') is-invalid @enderror" name="oldPassword" type="password" id="oldPassword">
-
-                                        @error('oldPassword')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-
+                                        <input class="form-control" name="antiguaContraseña" type="password" id="antiguaContraseña">
                                     </div>
                                 </div>
 
@@ -37,14 +46,7 @@
                                 <div class="row mb-3">
                                     <label for="name" class="col-sm-2 col-form-label">Contraseña Nueva</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control @error('newPassword') is-invalid @enderror" name="newPassword" type="password" id="newPassword">
-
-                                        @error('newPassword')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                        
+                                        <input class="form-control" name="nuevaContraseña" type="password" id="nuevaContraseña">
                                     </div>
                                 </div>
 
@@ -52,7 +54,7 @@
                                 <div class="row mb-3">
                                     <label for="name" class="col-sm-2 col-form-label">Confirmar Contraseña</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" name="confirmPassword" type="password" id="confirmPassword">
+                                        <input class="form-control" name="confirmarContraseña" type="password" id="confirmarContraseña">
                                     </div>
                                 </div>
 

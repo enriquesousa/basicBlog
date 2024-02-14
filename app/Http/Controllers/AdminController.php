@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 
 class AdminController extends Controller
@@ -84,10 +85,30 @@ class AdminController extends Controller
     public function UpdatePassword(Request $request){
 
         $validateData = $request->validate([
-            'oldPassword' => 'required',
-            'newPassword' => 'required|confirmed',
+            'antiguaContraseña' => 'required',
+            'nuevaContraseña' => 'required',
+            'confirmarContraseña' => 'required|same:nuevaContraseña',
         ]);
+
+
+        $hashedPassword = Auth::user()->password;
+        if (Hash::check($request->antiguaContraseña, $hashedPassword)) {
+            $user = User::find(Auth::id());
+            $user->password = Hash::make($request->nuevaContraseña);
+            $user->save();
+
+            session()->flash('message', 'Contraseña actualizada correctamente');
+            return redirect()->back();
+
+        }else{
+
+            session()->flash('message', 'La antigua contraseña no coincide');
+            return redirect()->back();
+        }
+
     }
+
+
 
 
 }
