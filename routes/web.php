@@ -19,7 +19,7 @@ use App\Http\Controllers\Home\HomeSliderController;
 */
 
 Route::get('/', function () {
-    return view('frontend.index');
+    return view('frontend.index');  
 })->name('home');
 
 Route::get('/dashboard', function () {
