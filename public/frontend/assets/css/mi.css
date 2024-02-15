@@ -1,0 +1,13 @@
+/* CSS para pop youtube video
+* Lo saque de: https://www.solodev.com/blog/web-design/how-to-add-pop-up-video-into-a-website.stml
+*/
+
+#headerPopup {
+    width: 75%;
+    margin: 0 auto;
+}
+
+#headerPopup iframe {
+    width: 100%;
+    margin: 0 auto;
+}

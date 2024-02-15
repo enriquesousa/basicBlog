@@ -24,6 +24,9 @@
         <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}">
         <link rel="stylesheet" href="{{ asset('frontend/assets/css/responsive.css') }}">
 
+        {{-- Mi Css --}}
+        <link rel="stylesheet" href="{{ asset('frontend/assets/css/micss.css') }}">
+
     </head>
 
     <body>
@@ -58,12 +61,17 @@
         <script src="{{ asset('frontend/assets/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('frontend/assets/js/isotope.pkgd.min.js') }}"></script>
         <script src="{{ asset('frontend/assets/js/imagesloaded.pkgd.min.js') }}"></script>
-        <script src="{{ asset('frontend/assets/') }}js/jquery.magnific-popup.min.js"></script>
+        <script src="{{ asset('frontend/assets/js/jquery.magnific-popup.min.js') }}"></script>
         <script src="{{ asset('frontend/assets/js/element-in-view.js') }}"></script>
         <script src="{{ asset('frontend/assets/js/slick.min.js') }}"></script>
         <script src="{{ asset('frontend/assets/js/ajax-form.js') }}"></script>
         <script src="{{ asset('frontend/assets/js/wow.min.js') }}"></script>
         <script src="{{ asset('frontend/assets/js/plugins.js') }}"></script>
         <script src="{{ asset('frontend/assets/js/main.js') }}"></script>
+
+        {{-- Mi Js --}}
+        <script src="{{ asset('frontend/assets/js/mijs.js') }}"></script>
+
+
     </body>
 </html>
