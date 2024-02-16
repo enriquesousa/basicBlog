@@ -195,6 +195,13 @@
         @endif
     </script>
 
+    {{-- Para el editorTinymce wysihtml5, Bootstrap-wysihtml5 is a javascript plugin that makes it easy to create simple, beautiful wysiwyg editors with the help of wysihtml5 and Twitter Bootstrap --}}
+     <!--tinymce js-->
+     <script src="{{ asset('backend/assets/libs/tinymce/tinymce.min.js') }} "></script>
+     <!-- init js -->
+     <script src="{{ asset('backend/assets/js/pages/form-editor.init.js') }} "></script>
+     
+
 </body>
 
 </html>
