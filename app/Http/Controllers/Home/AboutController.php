@@ -111,7 +111,7 @@ class AboutController extends Controller
             'alert-type' => 'success'
         );
 
-        return redirect()->back()->with($notification);
+        return redirect()->route('all.multi.image')->with($notification);
 
     }
 
@@ -160,6 +160,22 @@ class AboutController extends Controller
 
         }
         
+    }
+
+    // DeleteMultiImage
+    public function DeleteMultiImage($id){
+        $deleteMultiImage = MultiImage::findOrFail($id);
+        unlink(public_path($deleteMultiImage->multi_image)); // para borrar la imagen anterior
+        MultiImage::findOrFail($id)->delete();
+
+        // toastr notification
+        $notification = array(
+            'message' => 'Imagen eliminada correctamente',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
+
     }
 
 

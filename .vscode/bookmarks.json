@@ -7,6 +7,11 @@
 					"line": 140,
 					"column": 29,
 					"label": "unlink para borrar la imagen anterior"
+				},
+				{
+					"line": 167,
+					"column": 8,
+					"label": "unlink en delete image"
 				}
 			]
 		}

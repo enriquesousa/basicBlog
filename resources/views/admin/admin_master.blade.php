@@ -208,6 +208,10 @@
     <!-- Datatable init js -->
     <script src="{{ asset('backend/assets/js/pages/datatables.init.js') }}"></script>
 
+    {{-- Sweetalert, para mensajes de confirmación en botones de Eliminar en vista --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{{ asset('backend/assets/js/code.js') }}"></script>
+
 
 </body>
 
