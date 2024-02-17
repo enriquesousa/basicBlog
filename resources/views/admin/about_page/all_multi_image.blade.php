@@ -51,8 +51,8 @@
                                             <td><img src="{{ asset($item->multi_image) }}" style="width: 50px; height: 50px;"></td>
                                             <td>
                                                 {{-- Edit --}}
-                                                {{-- <a href="{{ route('multi.image.edit', $item->id) }}" class="btn btn-info sm" title="Edit Data"><i class="fas fa-edit"></i></a> --}}
-                                                <a href="#" class="btn btn-info sm" title="Editar Data"><i class="fas fa-edit"></i></a>
+                                                <a href="{{ route('multi.image.edit', $item->id) }}" class="btn btn-info sm" title="Edit Data"><i class="fas fa-edit"></i></a>
+                                                
                                                 {{-- Delete --}}
                                                 {{-- <a href="{{ route('multi.image.delete', $item->id) }}" class="btn btn-danger sm" title="Delete Data" id="delete"><i class="fas fa-trash-alt"></i></a> --}}
                                                 <a href="#" class="btn btn-danger sm" title="Eliminar Data" id="delete"><i class="fas fa-trash-alt"></i></a>

@@ -1,0 +1,14 @@
+{
+	"files": [
+		{
+			"path": "app/Http/Controllers/Home/AboutController.php",
+			"bookmarks": [
+				{
+					"line": 140,
+					"column": 29,
+					"label": "unlink para borrar la imagen anterior"
+				}
+			]
+		}
+	]
+}

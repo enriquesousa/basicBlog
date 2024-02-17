@@ -121,6 +121,46 @@ class AboutController extends Controller
        return view('admin.about_page.all_multi_image', compact('allMultiImage'));
     }
 
+    // EditMultiImage
+    public function EditMultiImage($id){
+       $editMultiImage = MultiImage::findOrFail($id);
+       return view('admin.about_page.edit_multi_image', compact('editMultiImage'));
+    }
+
+    // UpdateMultiImage
+    public function UpdateMultiImage(Request $request){
+
+        $multi_id = $request->id;
+        $imagenAnterior = $request->old_image;
+        // dd($imagenAnterior);
+
+         // Si hay imagen update con la imagen
+         if ($request->file('multi_image')) {
+
+            $imagen = $request->file('multi_image');
+            unlink(public_path($imagenAnterior)); // para borrar la imagen anterior
+            $name_gen = hexdec(uniqid()) . '.' . $imagen->getClientOriginalExtension();
+
+            // Creamos un objeto Image a partir de Intervention Image
+            $image = ImageManager::imagick()->read($imagen)->resize(220, 220)->save('upload/multi/' . $name_gen);
+
+            $save_url = 'upload/multi/' . $name_gen;
+
+            MultiImage::findOrFail($multi_id)->update([
+                'multi_image' => $save_url,
+            ]);
+
+            // toastr notification
+            $notification = array(
+                'message' => 'Imagen actualizada correctamente',
+                'alert-type' => 'success'
+            );
+
+            return redirect()->route('all.multi.image')->with($notification);
+
+        }
+        
+    }
 
 
 
