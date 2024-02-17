@@ -73,5 +73,11 @@ class AboutController extends Controller
 
     }
 
+    // HomeAbout
+    public function HomeAbout(){
+        $aboutPage = About::findOrFail(1);
+       return view('frontend.about_page', compact('aboutPage'));
+    }
+
 
 }
