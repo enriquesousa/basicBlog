@@ -80,4 +80,10 @@ class AboutController extends Controller
     }
 
 
+    // AboutMultiImage
+    public function AboutMultiImage(){
+       return view('admin.about_page.multi_image');
+    }
+
+
 }

@@ -39,7 +39,7 @@
                                 </ul>
                             </div>
                             <div class="header__btn d-none d-md-block">
-                                <a href="contact.html" class="btn">Contact me</a>
+                                <a href="{{ url('/login') }}" class="btn">Iniciar Sesión</a>
                             </div>
                         </nav>
                     </div>
