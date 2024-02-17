@@ -17,7 +17,7 @@
                             <h4 class="card-title">Subir Multiples Imágenes</h4>
                             <br><br>
 
-                            <form method="POST" action="{{ route('update.about') }}" enctype="multipart/form-data">
+                            <form method="POST" action="{{ route('store.multi.image') }}" enctype="multipart/form-data">
                                 @csrf
 
 
@@ -25,7 +25,7 @@
                                 <div class="row mb-3">
                                     <label for="about_image" class="col-sm-2 col-form-label">Seleccionar Multiples Imágenes</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" name="about_image" type="file" id="image">
+                                        <input class="form-control" name="multi_image[]" type="file" id="image" multiple>
                                     </div>
                                 </div>
 

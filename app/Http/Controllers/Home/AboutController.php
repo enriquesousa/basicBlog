@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\About;
+use App\Models\MultiImage;
 use Intervention\Image\ImageManager;
+use Illuminate\Support\Carbon;
 
 class AboutController extends Controller
 {
@@ -83,6 +85,34 @@ class AboutController extends Controller
     // AboutMultiImage
     public function AboutMultiImage(){
        return view('admin.about_page.multi_image');
+    }
+
+    // StoreMultiImage
+    public function StoreMultiImage(Request $request){
+
+        $image = $request->multi_image;
+       
+        foreach ($image as $multi_image) {
+
+            $name_gen = hexdec(uniqid()) . '.' . $multi_image->getClientOriginalExtension();
+            $image = ImageManager::imagick()->read($multi_image)->resize(220, 220)->save('upload/multi/' . $name_gen);
+            $save_url = 'upload/multi/' . $name_gen;
+
+            MultiImage::insert([
+                'multi_image' => $save_url,
+                'created_at' => Carbon::now()
+            ]);
+            
+        }
+
+         // toastr notification
+         $notification = array(
+            'message' => 'Imágenes actualizadas correctamente',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
+
     }
 
 
