@@ -63,6 +63,18 @@
                     </ul>
                 </li>
 
+                <!-- Portfolio Page Setup -->
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-suitcase-line"></i>
+                        <span>Portafolio Page Setup</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('all.portfolio') }}">Lista Portafolio</a></li>
+                        <li><a href="#">Agregar Portfolio</a></li>
+                    </ul>
+                </li>
+
                 <!-- Layouts -->
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
