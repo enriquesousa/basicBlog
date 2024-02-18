@@ -16,6 +16,25 @@ class PortfolioController extends Controller
         return view('admin.portfolio.portfolio_all',compact('portfolios'));
     }
 
+    // AddPortfolio
+    public function AddPortfolio(){
+        return view('admin.portfolio.portfolio_add');
+    }
+
+    // StorePortfolio
+    public function StorePortfolio(Request $request){
+
+        $request->validate([
+            'title' => 'required',
+            'short_description' => 'required',
+            'portfolio_image' => 'required',
+        ]);
+
+        
+
+
+    }
+
 
 
 }
