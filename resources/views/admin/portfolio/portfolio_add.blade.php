@@ -25,6 +25,9 @@
                                     <label for="portfolio_name" class="col-sm-2 col-form-label">Nombre Portafolio</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" name="portfolio_name" type="text">
+                                        @error('portfolio_name')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
 
@@ -33,6 +36,9 @@
                                     <label for="portfolio_title" class="col-sm-2 col-form-label">Titulo Portafolio</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" name="portfolio_title" type="text">
+                                        @error('portfolio_title')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
 
@@ -50,6 +56,9 @@
                                     <label for="portfolio_image" class="col-sm-2 col-form-label">Seleccionar Imagen Portafolio</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" name="portfolio_image" type="file" id="image">
+                                        @error('portfolio_image')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
 
@@ -66,7 +75,7 @@
                                 </div>
 
                                 {{-- Botón Actualizar --}}
-                                <input type="submit" class="btn btn-info waves-effect waves-light" value="Insertar Pagina Portafolio">
+                                <input type="submit" class="btn btn-info waves-effect waves-light" value="Insertar Portafolio">
 
                             </form>
 
