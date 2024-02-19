@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\HomeSlide;
-
 use Intervention\Image\ImageManager;
 
 
@@ -17,6 +16,15 @@ class HomeSliderController extends Controller
     {
 
         $homeSlide = HomeSlide::find(1);
+        // En caso que sea la primera vez y no hay datos, creamos el primer registro
+        if ($homeSlide == null) {
+            $homeSlide = new HomeSlide();
+            $homeSlide->title = 'Test Title';
+            $homeSlide->short_title = 'Test Short Title';
+            $homeSlide->video_url = 'https://www.youtube.com/watch?v=eEzD-Y97ges';
+            $homeSlide->home_slide = '';
+            $homeSlide->save();
+        };
         return view('admin.home_slide.home_slide_all', compact('homeSlide'));
     }
 
