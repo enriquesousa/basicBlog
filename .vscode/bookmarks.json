@@ -24,6 +24,16 @@
 					"label": "unlink image"
 				}
 			]
+		},
+		{
+			"path": "resources/views/frontend/portfolio_details.blade.php",
+			"bookmarks": [
+				{
+					"line": 47,
+					"column": 28,
+					"label": "para desplegar html text in p tag"
+				}
+			]
 		}
 	]
 }
