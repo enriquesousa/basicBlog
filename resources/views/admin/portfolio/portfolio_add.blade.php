@@ -7,6 +7,21 @@
     <div class="page-content">
         <div class="container-fluid">
 
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                        <h4 class="mb-sm-0">Agregar <strong>Portafolio</strong></h4>
+                        <div class="page-title-right">
+
+                            <a href="{{ route('all.portfolio') }}" class="btn btn-success waves-effect waves-light"><i class="dripicons-return"></i> Regresar a Lista de Portafolios</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end page title -->
+
             <div class="row">
 
                 {{-- Columna 1 --}}
@@ -74,8 +89,18 @@
                                     </div>
                                 </div>
 
+
                                 {{-- Botón Actualizar --}}
-                                <input type="submit" class="btn btn-info waves-effect waves-light" value="Insertar Portafolio">
+                                <div class="row mb-3">
+                                    <label for="portfolio_image" class="col-sm-2 col-form-label"></label>
+                                    <div class="col-sm-10">
+
+                                        {{-- <input type="submit" class="btn btn-info waves-effect waves-light" value="Insertar Portafolio"> --}}
+                                        <button type="submit" class="btn btn-primary waves-effect waves-light"><i class="ri-save-3-line"></i> Insertar Portafolio</button>
+                                        
+                                    </div>
+                                </div>
+
 
                             </form>
 

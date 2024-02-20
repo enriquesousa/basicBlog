@@ -8,10 +8,12 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                        <h4 class="mb-sm-0">Lista <strong>Portafolios</strong></h4>
+                        <h4 class="mb-sm-0">Lista <strong>Categorías del Blog</strong></h4>
 
                         <div class="page-title-right">
-                            <a href="{{ route('add.portfolio') }}" class="btn btn-success waves-effect waves-light"><i class="fas fa-plus-circle"></i> Agregar Portafolio</a>
+                            {{-- <a href="{{ route('add.blog.category') }}" class="btn btn-success waves-effect waves-light"><i class="fas fa-plus-circle"></i> Agregar Categoría"></a> --}}
+                            <a href="#" class="btn btn-success waves-effect waves-light"><i class="fas fa-plus-circle"></i> Agregar Categoría</a>
+                        </ol>
                         </div>
 
                     </div>
@@ -24,8 +26,8 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <h4 class="card-title">Lista datos del <strong>Portafolio</strong></h4>
-                            <p class="card-title-desc">Lista datos del <code>portafolio</code> en el frontend.</p>
+                            <h4 class="card-title">Lista <strong>Categorías del Blog</strong></h4>
+                            <p class="card-title-desc">Lista de categorías del <code>blog</code> para el frontend.</p>
 
                             <table id="datatable" class="table table-bordered dt-responsive nowrap"
                                 style="border-collapse: collapse; border-spacing: 0; width: 100%;">
@@ -33,9 +35,7 @@
                                 <thead>
                                     <tr>
                                         <th>Serie</th>
-                                        <th>Nombre</th>
-                                        <th>Titulo</th>
-                                        <th>Imagen</th>
+                                        <th>Categoría</th>
                                         <th>Acción</th>
                                     </tr>
                                 </thead>
@@ -44,19 +44,14 @@
                                 <tbody>
 
                                     @php($i = 1)
-                                    @foreach ($portfolios as $item)
+                                    @foreach ($blogCategories as $item)
                                         <tr>
 
                                             {{-- Serie --}}
                                             <td>{{ $i++ }}</td>
 
-                                            {{-- Nombre --}}
-                                            <td>{{ $item->portfolio_name }}</td>
-
-                                            {{-- Titulo --}}
-                                            <td>{{ $item->portfolio_title }}</td>
-
-                                            <td><img src="{{ asset($item->portfolio_image) }}" style="width: 60px; height: 50px;"></td>
+                                            {{-- Categoría --}}
+                                            <td>{{ $item->blog_category }}</td>
 
                                             <td>
 
@@ -83,4 +78,5 @@
         </div> <!-- container-fluid -->
     </div>
     <!-- End Page-content -->
+
 @endsection

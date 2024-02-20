@@ -1,0 +1,21 @@
+<?php
+
+namespace App\Http\Controllers\Home;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+use App\Models\BlogCategory;
+
+class BlogCategoryController extends Controller
+{
+    // AllBlogCategory
+    public function AllBlogCategory(){
+        $blogCategories = BlogCategory::latest()->get();
+        return view('admin.blog_category.all_blog_category', compact('blogCategories'));
+    }
+
+
+
+
+}
