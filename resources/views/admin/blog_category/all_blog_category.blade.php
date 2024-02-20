@@ -11,8 +11,7 @@
                         <h4 class="mb-sm-0">Lista <strong>Categorías del Blog</strong></h4>
 
                         <div class="page-title-right">
-                            {{-- <a href="{{ route('add.blog.category') }}" class="btn btn-success waves-effect waves-light"><i class="fas fa-plus-circle"></i> Agregar Categoría"></a> --}}
-                            <a href="#" class="btn btn-success waves-effect waves-light"><i class="fas fa-plus-circle"></i> Agregar Categoría</a>
+                            <a href="{{ route('add.blog.category') }}" class="btn btn-success waves-effect waves-light"><i class="fas fa-plus-circle"></i> Agregar Categoría"></a>
                         </ol>
                         </div>
 

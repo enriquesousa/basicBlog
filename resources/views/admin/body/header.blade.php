@@ -202,10 +202,16 @@
             <div class="dropdown d-none d-sm-inline-block">
                 <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
-                    <img class="" src="{{ asset('backend/assets/images/flags/us.jpg') }}" alt="Header Language"
+                    <img class="" src="{{ asset('backend/assets/images/flags/mexico.png') }}" alt="Header Language"
                         height="16">
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
+
+                     <!-- item-->
+                     <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <img src="{{ asset('backend/assets/images/flags/mexico.png') }}" alt="user-image"
+                            class="me-1" height="12"> <span class="align-middle">México</span>
+                    </a>
 
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item">
