@@ -14,6 +14,16 @@
 					"label": "unlink en delete image"
 				}
 			]
+		},
+		{
+			"path": "app/Http/Controllers/Home/PortfolioController.php",
+			"bookmarks": [
+				{
+					"line": 87,
+					"column": 51,
+					"label": "unlink image"
+				}
+			]
 		}
 	]
 }

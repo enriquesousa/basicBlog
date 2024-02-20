@@ -54,7 +54,7 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class=" ri-user-2-line"></i>
-                        <span>About Page Setup</span>
+                        <span>Config About</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('about.page') }}">About Page</a></li>
@@ -67,7 +67,7 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-suitcase-line"></i>
-                        <span>Portafolio Page Setup</span>
+                        <span>Config Portafolio</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('all.portfolio') }}">Lista Portafolio</a></li>
