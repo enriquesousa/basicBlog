@@ -11,7 +11,7 @@
                         <h4 class="mb-sm-0">Lista <strong>Categorías del Blog</strong></h4>
 
                         <div class="page-title-right">
-                            <a href="{{ route('add.blog.category') }}" class="btn btn-success waves-effect waves-light"><i class="fas fa-plus-circle"></i> Agregar Categoría"></a>
+                            <a href="{{ route('add.blog.category') }}" class="btn btn-success waves-effect waves-light"><i class="fas fa-plus-circle"></i> Agregar Categoría</a>
                         </ol>
                         </div>
 
@@ -55,10 +55,10 @@
                                             <td>
 
                                                 {{-- Edit --}}
-                                                <a href="{{ route('edit.portfolio', $item->id) }}" class="btn btn-info sm" title="Edit Data"><i class="fas fa-edit"></i></a>
+                                                <a href="{{ route('edit.blog.category', $item->id) }}" class="btn btn-info sm" title="Edit Data"><i class="fas fa-edit"></i></a>
                                                 
                                                 {{-- Delete --}}
-                                                <a href="{{ route('delete.portfolio', $item->id) }}" class="btn btn-danger sm" title="Delete Data" id="delete"><i class="fas fa-trash-alt"></i></a>
+                                                <a href="{{ route('delete.blog.category', $item->id) }}" class="btn btn-danger sm" title="Delete Data" id="delete"><i class="fas fa-trash-alt"></i></a>
 
                                             </td>
                                             

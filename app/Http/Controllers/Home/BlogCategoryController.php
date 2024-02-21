@@ -48,7 +48,46 @@ class BlogCategoryController extends Controller
         return redirect()->route('all.blog.category')->with($notification);
     }
 
+    // EditBlogCategory
+    public function EditBlogCategory($id){
+        $blogCategory = BlogCategory::findOrFail($id);
+        return view('admin.blog_category.edit_blog_category', compact('blogCategory'));
+    }
 
+    // UpdateBlogCategory
+    public function UpdateBlogCategory(Request $request){
+
+        $blogCategory_id = $request->id;
+
+        BlogCategory::findOrFail($blogCategory_id)->update([
+            'blog_category' => $request->blog_category,
+            'updated_at' => Carbon::now(),
+        ]);
+
+        // toastr notification
+        $notification = array(
+            'message' => 'Categoría actualizada correctamente',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('all.blog.category')->with($notification);
+
+    }
+
+    // DeleteBlogCategory
+    public function DeleteBlogCategory($id){
+
+        BlogCategory::findOrFail($id)->delete();
+
+        // toastr notification
+        $notification = array(
+            'message' => 'Categoría eliminada correctamente',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
+
+    }
 
 
 }
