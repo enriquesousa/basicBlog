@@ -71,13 +71,13 @@
                                             <td>
 
                                                 {{-- Edit --}}
-                                                <a href="{{ route('edit.portfolio', $item->id) }}"
-                                                    class="btn btn-info sm" title="Edit Data"><i
+                                                <a href="{{ route('edit.blog', $item->id) }}"
+                                                    class="btn btn-info sm" title="Editar"><i
                                                         class="fas fa-edit"></i></a>
 
                                                 {{-- Delete --}}
                                                 <a href="{{ route('delete.portfolio', $item->id) }}"
-                                                    class="btn btn-danger sm" title="Delete Data" id="delete"><i
+                                                    class="btn btn-danger sm" title="Eliminar" id="delete"><i
                                                         class="fas fa-trash-alt"></i></a>
 
                                             </td>
