@@ -75,15 +75,27 @@
                     </ul>
                 </li>
 
-                <!-- Categorías -->
+                <!-- Setup Categorías -->
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-suitcase-line"></i>
-                        <span>Categorías del Blog</span>
+                        <span>Config Categorías</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('all.blog.category') }}">Lista Categorías</a></li>
                         <li><a href="{{ route('add.blog.category') }}">Agregar Categorías</a></li>
+                    </ul>
+                </li>
+
+                <!-- Config Pagina Blog -->
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-suitcase-line"></i>
+                        <span>Config Blog</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('all.blog') }}">Lista Blogs</a></li>
+                        <li><a href="#">Agregar Blog</a></li>
                     </ul>
                 </li>
 
