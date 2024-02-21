@@ -42,7 +42,7 @@
 
                             <h4 class="card-title">Agregar Blog</h4>
 
-                            <form method="POST" action="{{ route('store.portfolio') }}" enctype="multipart/form-data">
+                            <form method="POST" action="{{ route('store.blog') }}" enctype="multipart/form-data">
                                 @csrf
 
 
@@ -77,7 +77,7 @@
                                 <div class="row mb-3">
                                     <label for="blog_tags" class="col-sm-2 col-form-label">Tags</label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" name="blog_tags" type="text" value="home, blog, tech" data-role="tagsinput">
+                                        <input class="form-control" name="blog_tags" type="text" value="Laravel, Blog, Funciones" data-role="tagsinput">
                                     </div>
                                 </div>
 

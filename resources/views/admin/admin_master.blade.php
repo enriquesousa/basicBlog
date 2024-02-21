@@ -157,7 +157,7 @@
 
 
 
-    {{-- Toastr Code toster --}}
+    {{-- Toastr Code toster. demo link: https://codeseven.github.io/toastr and https://codeseven.github.io/toastr/demo.html --}}
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script>
         @if (Session::has('message'))
@@ -167,7 +167,10 @@
                 "debug": false,
                 "newestOnTop": false,
                 "progressBar": false,
-                "positionClass": "toast-top-center",
+                // "positionClass": "toast-top-center",
+                // "positionClass": "toast-bottom-full-width",
+                // "positionClass": "toast-bottom-right",
+                "positionClass": "toast-top-right",
                 "preventDuplicates": false,
                 "onclick": null,
                 "showDuration": "300",
