@@ -6,7 +6,9 @@
 
             <!-- LOGO -->
             <div class="navbar-brand-box">
-                <a href="index.html" class="logo logo-dark">
+
+                <!-- Dark Logo-->
+                <a href="{{ route('dashboard') }}" class="logo logo-dark">
                     <span class="logo-sm">
                         <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="logo-sm" height="22">
                     </span>
@@ -15,7 +17,8 @@
                     </span>
                 </a>
 
-                <a href="index.html" class="logo logo-light">
+                <!-- Light Logo-->
+                <a href="{{ route('dashboard') }}" class="logo logo-light">
                     <span class="logo-sm">
                         <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="logo-sm-light" height="22">
                     </span>
@@ -23,6 +26,7 @@
                         <img src="{{ asset('backend/assets/images/logo-light.png') }}" alt="logo-light" height="20">
                     </span>
                 </a>
+
             </div>
 
             <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect" id="vertical-menu-btn">
