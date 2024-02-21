@@ -83,4 +83,3 @@ Route::controller(BlogCategoryController::class)->group(function () {
     Route::post('/update/blog/category', 'UpdateBlogCategory')->name('update.blog.category');
     Route::get('/delete/blog/category/{id}', 'DeleteBlogCategory')->name('delete.blog.category');
 });
-
