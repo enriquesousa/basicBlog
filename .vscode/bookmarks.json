@@ -19,6 +19,11 @@
 			"path": "app/Http/Controllers/Home/PortfolioController.php",
 			"bookmarks": [
 				{
+					"line": 30,
+					"column": 27,
+					"label": "custom validation"
+				},
+				{
 					"line": 87,
 					"column": 51,
 					"label": "unlink image"
@@ -52,6 +57,16 @@
 					"line": 160,
 					"column": 120,
 					"label": "toastr toster js en plantilla master"
+				}
+			]
+		},
+		{
+			"path": "app/Models/Blog.php",
+			"bookmarks": [
+				{
+					"line": 15,
+					"column": 30,
+					"label": "relacion"
 				}
 			]
 		}
