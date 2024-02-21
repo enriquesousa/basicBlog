@@ -95,7 +95,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('all.blog') }}">Lista Blogs</a></li>
-                        <li><a href="#">Agregar Blog</a></li>
+                        <li><a href="{{ route('add.blog') }}">Agregar Blog</a></li>
                     </ul>
                 </li>
 

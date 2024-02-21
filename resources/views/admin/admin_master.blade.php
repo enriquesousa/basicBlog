@@ -34,6 +34,9 @@
     <!-- App Css-->
     <link href="{{ asset('backend/assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
 
+    <!-- Bootstrap Tagsinput Css, para los tags de las publicaciones, lo uso en resources/views/admin/blogs/add_blog.blade.php -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.tagsinput/0.8.0/bootstrap-tagsinput.css" >
+
     <!-- toastr toster-->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
 
@@ -212,6 +215,8 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{ asset('backend/assets/js/code.js') }}"></script>
 
+    <!-- Bootstrap Tagsinput js, para los tags de las publicaciones, lo uso en resources/views/admin/blogs/add_blog.blade.php -->
+    <script src="https://cdn.jsdelivr.net/bootstrap.tagsinput/0.8.0/bootstrap-tagsinput.min.js" ></script>
 
 </body>
 

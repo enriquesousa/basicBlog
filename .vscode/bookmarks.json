@@ -34,6 +34,16 @@
 					"label": "para desplegar html text in p tag"
 				}
 			]
+		},
+		{
+			"path": "resources/views/admin/blogs/add_blog.blade.php",
+			"bookmarks": [
+				{
+					"line": 7,
+					"column": 27,
+					"label": "CSS en vista tags"
+				}
+			]
 		}
 	]
 }
