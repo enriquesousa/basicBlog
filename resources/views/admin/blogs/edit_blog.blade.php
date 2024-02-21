@@ -43,11 +43,14 @@
                             <h4 class="card-title">Editar Blog</h4>
                             <br>
 
-                            <form method="POST" action="{{ route('store.blog') }}" enctype="multipart/form-data">
+                            <form method="POST" action="{{ route('update.blog') }}" enctype="multipart/form-data">
                                 @csrf
 
                                 {{-- ID --}}
                                 <input type="hidden" name="id" value="{{ $blog->id }}">
+
+                                {{-- old imagen --}}
+                                <input type="hidden" name="old_image" value="{{ $blog->blog_image }}">
 
                                 {{-- Nombre Categoría --}}
                                 <div class="row mb-3">

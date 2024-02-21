@@ -74,7 +74,7 @@
 			"path": "resources/views/admin/blogs/edit_blog.blade.php",
 			"bookmarks": [
 				{
-					"line": 58,
+					"line": 61,
 					"column": 53,
 					"label": "condicion para las opciones del select selected value"
 				}

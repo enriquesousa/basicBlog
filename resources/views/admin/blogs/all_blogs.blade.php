@@ -76,7 +76,7 @@
                                                         class="fas fa-edit"></i></a>
 
                                                 {{-- Delete --}}
-                                                <a href="{{ route('delete.portfolio', $item->id) }}"
+                                                <a href="{{ route('delete.blog', $item->id) }}"
                                                     class="btn btn-danger sm" title="Eliminar" id="delete"><i
                                                         class="fas fa-trash-alt"></i></a>
 

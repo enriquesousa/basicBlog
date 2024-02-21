@@ -67,6 +67,87 @@ class BlogController extends Controller
         return view('admin.blogs.edit_blog', compact('blog', 'blogCategories'));
     }
 
+    // UpdateBlog
+    public function UpdateBlog(Request $request){
+
+        $blog_id = $request->id;
+        $old_image = $request->old_image;
+
+        // Si hay imagen update con la imagen
+        if ($request->file('blog_image')) {
+
+            $imagen = $request->file('blog_image');
+
+            // $old_image regresa "upload/portfolio/1780653224833182.jpg"
+            unlink(public_path($old_image)); // para borrar la imagen anterior
+
+            $name_gen = hexdec(uniqid()) . '.' . $imagen->getClientOriginalExtension();
+
+            // Creamos un objeto Image a partir de Intervention Image
+            $image = ImageManager::imagick()->read($imagen)->resize(430, 327)->save('upload/blog/' . $name_gen);
+
+            $save_url = 'upload/blog/' . $name_gen;
+
+            Blog::findOrFail($blog_id)->update([
+                'blog_category_id' => $request->blog_category_id,
+                'blog_title' => $request->blog_title,
+                'blog_tags' => $request->blog_tags,
+                'blog_description' => $request->blog_description,
+                'blog_image' => $save_url,
+                'updated_at' => Carbon::now(),
+            ]);
+
+            // toastr notification
+            $notification = array(
+                'message' => 'Blog con Imagen actualizado correctamente',
+                'alert-type' => 'success'
+            );
+
+            return redirect()->route('all.blog')->with($notification);
+
+        } else {
+
+            // Si no hay imagen update sin la imagen
+
+            Blog::findOrFail($blog_id)->update([
+                'blog_category_id' => $request->blog_category_id,
+                'blog_title' => $request->blog_title,
+                'blog_tags' => $request->blog_tags,
+                'blog_description' => $request->blog_description,
+                'updated_at' => Carbon::now(),
+            ]);
+
+            // toastr notification
+            $notification = array(
+                'message' => 'Blog sin Imagen actualizado correctamente',
+                'alert-type' => 'success'
+            );
+
+            return redirect()->route('all.blog')->with($notification);
+
+        }
+
+    }
+
+
+    // DeleteBlog
+    public function DeleteBlog($id){
+
+        $blog = Blog::findOrFail($id);
+        unlink(public_path($blog->blog_image)); // para borrar la imagen anterior
+
+        Blog::findOrFail($id)->delete();
+
+        // toastr notification
+        $notification = array(
+            'message' => 'Blog eliminado correctamente',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
+
+    }
+
 
 
 }
