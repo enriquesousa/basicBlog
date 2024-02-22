@@ -8,11 +8,11 @@
     @include('frontend.home_all.home_slide')
     <!-- banner-area-end -->
 
-    <!-- about-area -->
+    <!-- 01 - ABOUT ME - about-area -->
     @include('frontend.home_all.home_about')
     <!-- about-area-end -->
 
-    {{-- 02 - my Services --}}
+    {{-- 02 -  MY SERVICES - my Services --}}
     <!-- services-area -->
     <section class="services">
         <div class="container">
@@ -145,7 +145,7 @@
     </section>
     <!-- services-area-end -->
 
-    {{-- 03 - Working Process --}}
+    {{-- 03 - WORKING PROCESS - Working Process --}}
     <!-- work-process-area -->
     <section class="work__process">
         <div class="container">
@@ -215,12 +215,12 @@
     </section>
     <!-- work-process-area-end -->
 
-    <!-- portfolio-area -->
+    <!-- 04 - PORTFOLIO - portfolio-area -->
     @include('frontend.home_all.home_portfolio')
     <!-- portfolio-area-end -->
 
-    <!-- partner-area -->
-    <section class="partner">
+    <!-- 05 - PARTNERS - partner-area -->
+    {{-- <section class="partner">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -263,11 +263,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- partner-area-end -->
 
-    <!-- testimonial-area -->
-    <section class="testimonial">
+    <!-- 06 - CLIENT FEEDBACK - testimonial-area -->
+    {{-- <section class="testimonial">
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-6 order-0 order-lg-2">
@@ -316,67 +316,14 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- testimonial-area-end -->
 
-    <!-- blog-area -->
-    <section class="blog">
-        <div class="container">
-            <div class="row gx-0 justify-content-center">
-                <div class="col-lg-4 col-md-6 col-sm-9">
-                    <div class="blog__post__item">
-                        <div class="blog__post__thumb">
-                            <a href="blog-details.html"><img src="{{ asset('frontend/assets/') }}img/blog/blog_post_thumb01.jpg" alt=""></a>
-                            <div class="blog__post__tags">
-                                <a href="blog.html">Story</a>
-                            </div>
-                        </div>
-                        <div class="blog__post__content">
-                            <span class="date">13 january 2021</span>
-                            <h3 class="title"><a href="blog-details.html">Facebook design is dedicated to what's new in design</a></h3>
-                            <a href="blog-details.html" class="read__more">Read mORe</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-9">
-                    <div class="blog__post__item">
-                        <div class="blog__post__thumb">
-                            <a href="blog-details.html"><img src="{{ asset('frontend/assets/') }}img/blog/blog_post_thumb02.jpg" alt=""></a>
-                            <div class="blog__post__tags">
-                                <a href="blog.html">Social</a>
-                            </div>
-                        </div>
-                        <div class="blog__post__content">
-                            <span class="date">13 january 2021</span>
-                            <h3 class="title"><a href="blog-details.html">Make communication Fast and Effectively.</a></h3>
-                            <a href="blog-details.html" class="read__more">Read mORe</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-9">
-                    <div class="blog__post__item">
-                        <div class="blog__post__thumb">
-                            <a href="blog-details.html"><img src="{{ asset('frontend/assets/') }}img/blog/blog_post_thumb03.jpg" alt=""></a>
-                            <div class="blog__post__tags">
-                                <a href="blog.html">Work</a>
-                            </div>
-                        </div>
-                        <div class="blog__post__content">
-                            <span class="date">13 january 2021</span>
-                            <h3 class="title"><a href="blog-details.html">How to increase your productivity at work - 2021</a></h3>
-                            <a href="blog-details.html" class="read__more">Read mORe</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="blog__button text-center">
-                <a href="blog.html" class="btn">more blog</a>
-            </div>
-        </div>
-    </section>
+    <!-- 06a - BLOG - blog-area -->
+    @include('frontend.home_all.home_blog')
     <!-- blog-area-end -->
 
-    <!-- contact-area -->
+    <!-- 07 SAY HELLO - contact-area -->
     <section class="homeContact">
         <div class="container">
             <div class="homeContact__wrap">

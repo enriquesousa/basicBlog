@@ -79,6 +79,16 @@
 					"label": "condicion para las opciones del select selected value"
 				}
 			]
+		},
+		{
+			"path": "resources/views/frontend/home_all/home_blog.blade.php",
+			"bookmarks": [
+				{
+					"line": 21,
+					"column": 28,
+					"label": "carbon date en vista"
+				}
+			]
 		}
 	]
 }
