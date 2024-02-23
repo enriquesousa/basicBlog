@@ -14,9 +14,9 @@
                             <div class="navbar__wrap main__menu d-none d-xl-flex">
                                 <ul class="navigation">
 
-                                    <li class="active"><a href="{{ route('home') }}">Home</a></li>
+                                    <li class="{{ request()->routeIs('home') ? 'active' : '' }}"><a href="{{ route('home') }}">Home</a></li>
 
-                                    <li><a href="{{ route('home.about') }}">About</a></li>
+                                    <li class="{{ request()->routeIs('home.about') ? 'active' : '' }}"><a href="{{ route('home.about') }}">About</a></li>
 
                                     <li><a href="services-details.html">Services</a></li>
 

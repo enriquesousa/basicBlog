@@ -20,7 +20,7 @@
                 <!-- Light Logo-->
                 <a href="{{ route('dashboard') }}" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="logo-sm-light" height="22">
+                        ="{{ asset('backend/assets/images/logo-sm.png') }}" alt="logo-sm-light" height="22">
                     </span>
                     <span class="logo-lg">
                         <img src="{{ asset('backend/assets/images/logo-light.png') }}" alt="logo-light" height="20">
@@ -164,7 +164,7 @@
 
                                 <div class="col-sm-5">
                                     <div>
-                                        <img src="{{ asset('backend/assets/images/megamenu-img.png') }}"
+                                        ="{{ asset('backend/assets/images/megamenu-img.png') }}"
                                             alt="megamenu-img" class="img-fluid mx-auto d-block">
                                     </div>
                                 </div>

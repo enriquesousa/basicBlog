@@ -1,6 +1,11 @@
 @extends('frontend.main_master')
 @section('main')
 
+{{-- @php
+    $nombre = request()->routeIs('home.about');
+    dd($nombre);
+@endphp --}}
+
 <!-- main-area -->
 <main>
 
