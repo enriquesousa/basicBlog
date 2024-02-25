@@ -149,5 +149,15 @@ class BlogController extends Controller
     }
 
 
+    // BlogDetails
+    public function BlogDetails($id){
+        $allCategories = BlogCategory::orderBy('blog_category', 'ASC')->get();
+        $allBlogs = Blog::latest()->limit(5)->get();
+        $blog = Blog::findOrFail($id);
+        return view('frontend.blog_details', compact('blog', 'allBlogs', 'allCategories'));
+    }
+
+
+
 
 }

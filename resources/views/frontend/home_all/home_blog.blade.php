@@ -20,8 +20,8 @@
                         </div>
                         <div class="blog__post__content">
                             <span class="date">{{ \Carbon\Carbon::parse($item->created_at)->locale('es')->isoFormat('D[/]MMM[/]YYYY') }}</span>
-                            <h3 class="title"><a href="blog-details.html">{{ $item->blog_title }}</a></h3>
-                            <a href="blog-details.html" class="read__more">LEER MÁS</a>
+                            <h3 class="title"><a href="{{ route('blog.details', $item->id) }}">{{ $item->blog_title }}</a></h3>
+                            <a href="{{ route('blog.details', $item->id) }}" class="read__more">LEER MÁS</a>
                         </div>
                     </div>
                 </div>
