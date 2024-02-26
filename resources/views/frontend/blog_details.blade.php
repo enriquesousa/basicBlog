@@ -248,7 +248,7 @@
                             <h4 class="widget-title">Categorías</h4>
                             <ul class="sidebar__cat">
                                 @foreach ($allCategories as $item)
-                                    <li class="sidebar__cat__item"><a href="blog.html">{{ $item->blog_category }}</a></li>
+                                    <li class="sidebar__cat__item"><a href="{{ route('category.posts', $item->id) }}">{{ $item->blog_category }}</a></li>
                                 @endforeach
                             </ul>
                         </div>
