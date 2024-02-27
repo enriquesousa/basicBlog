@@ -170,6 +170,14 @@ class BlogController extends Controller
     }
 
 
+    // HomeBlog
+    public function HomeBlog(){
+        $allBlogs = Blog::latest()->get();
+        $allCategories = BlogCategory::orderBy('blog_category', 'ASC')->get();
+        return view('frontend.home_blog', compact('allBlogs', 'allCategories'));
+    }
+
+
 
 
 }
