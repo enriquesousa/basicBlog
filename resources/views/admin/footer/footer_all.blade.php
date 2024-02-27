@@ -27,6 +27,9 @@
                                     <label for="number" class="col-sm-2 col-form-label">Teléfono</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" name="number" type="tel" id="example-tel-input" placeholder="(555) 555-5555" value="{{ $dataFooter->number }}">
+                                        @error('number')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
 
@@ -35,6 +38,9 @@
                                     <label for="short_description" class="col-sm-2 col-form-label">Descripción corta</label>
                                     <div class="col-sm-10">
                                         <textarea name="short_description" required="" class="form-control" rows="5">{{ $dataFooter->short_description }}</textarea>
+                                        @error('short_description')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
 
@@ -43,6 +49,9 @@
                                     <label for="address" class="col-sm-2 col-form-label">Dirección</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" name="address" type="text" id="example-text-input" value="{{ $dataFooter->address }}">        
+                                        @error('address')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
 
@@ -51,6 +60,9 @@
                                     <label for="email" class="col-sm-2 col-form-label">Correo Electrónico</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" name="email" type="email" id="example-email-input" value="{{ $dataFooter->email }}">
+                                        @error('email')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
 
@@ -59,6 +71,9 @@
                                     <label for="facebook" class="col-sm-2 col-form-label">Liga de Facebook</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" name="facebook" type="text" value="{{ $dataFooter->facebook }}">
+                                        @error('facebook')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
 
@@ -67,6 +82,9 @@
                                     <label for="twitter" class="col-sm-2 col-form-label">Liga de X/Twitter</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" name="twitter" type="text" value="{{ $dataFooter->twitter }}">
+                                        @error('twitter')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
 
@@ -75,6 +93,9 @@
                                     <label for="copyright" class="col-sm-2 col-form-label">Derechos de Copyright</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" name="copyright" type="text" value="{{ $dataFooter->copyright }}">
+                                        @error('copyright')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
 
