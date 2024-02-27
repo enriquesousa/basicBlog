@@ -64,7 +64,7 @@
 			"path": "app/Models/Blog.php",
 			"bookmarks": [
 				{
-					"line": 15,
+					"line": 26,
 					"column": 30,
 					"label": "relacion"
 				}
@@ -87,21 +87,6 @@
 					"line": 21,
 					"column": 28,
 					"label": "carbon date en vista"
-				}
-			]
-		},
-		{
-			"path": "resources/views/frontend/blog_details.blade.php",
-			"bookmarks": [
-				{
-					"line": 51,
-					"column": 34,
-					"label": "date diffforhumans en blade"
-				},
-				{
-					"line": 65,
-					"column": 52,
-					"label": "explode string array"
 				}
 			]
 		}

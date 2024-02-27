@@ -13,8 +13,8 @@
                         <h2 class="title">{{ $blog->blog_title }}</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
+                                <li class="breadcrumb-item"><a href="index.html">Detalles </a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Blog</li>
                             </ol>
                         </nav>
                     </div>
@@ -39,21 +39,28 @@
     <section class="standard__blog blog__details">
         <div class="container">
             <div class="row">
+
+                {{-- Primer Columna --}}
                 <div class="col-lg-8">
                     <div class="standard__blog__post">
 
+                        {{-- Imagen Principal --}}
                         <div class="standard__blog__thumb">
                             <img src="{{ asset($blog->blog_image) }}" alt="" width="850px" height="430px">
                         </div>
 
+                        {{-- Contenido Principal --}}
                         <div class="blog__details__content services__details__content">
 
+                            {{-- Fecha --}}
                             <ul class="blog__post__meta">
                                 <li><i class="fal fa-calendar-alt"></i> {{ \Carbon\Carbon::parse($blog->created_at)->diffForHumans() }}</li>
                             </ul>
 
+                            {{-- Blog Title y Description --}}
                             <h2 class="title">{{ $blog->blog_title }}</h2>
                             <p>{!! $blog->blog_description !!}</p>
+
                         </div>
 
                         {{-- Tags --}}
@@ -214,6 +221,8 @@
 
                     </div>
                 </div>
+
+                {{-- segunda columna --}}
                 <div class="col-lg-4">
                     <aside class="blog__sidebar">
                         <div class="widget">
@@ -231,11 +240,16 @@
                                 @foreach ($allBlogs as $item)
                                     <li class="rc__post__item">
                                         <div class="rc__post__thumb">
-                                            <a href="blog-details.html"><img src="assets/img/blog/rc_thumb01.jpg" alt=""></a>
+                                            <a href="{{ route('blog.details', $item->id) }}"><img src="{{ asset($item->blog_image) }}" alt=""></a>
                                         </div>
                                         <div class="rc__post__content">
-                                            <h5 class="title"><a href="blog-details.html">{{ $item->blog_title }}</a></h5>
-                                            <span class="post-date"><i class="fal fa-calendar-alt"></i> {{ \Carbon\Carbon::parse($item->created_at)->locale('es')->isoFormat('D[/]MMM[/]YYYY') }}</span>
+                                            <h5 class="title">
+                                                <a href="{{ route('blog.details', $item->id) }}">{{ $item->blog_title }}</a>
+                                            </h5>
+                                            <span class="post-date">
+                                                <i class="fal fa-calendar-alt"></i>
+                                                {{ \Carbon\Carbon::parse($item->created_at)->locale('es')->isoFormat('D[/]MMM[/]YYYY') }}
+                                            </span>
                                         </div>
                                     </li>
                                 @endforeach
@@ -248,7 +262,9 @@
                             <h4 class="widget-title">Categorías</h4>
                             <ul class="sidebar__cat">
                                 @foreach ($allCategories as $item)
-                                    <li class="sidebar__cat__item"><a href="{{ route('category.posts', $item->id) }}">{{ $item->blog_category }}</a></li>
+                                    <li class="sidebar__cat__item">
+                                        <a href="{{ route('category.posts', $item->id) }}">{{ $item->blog_category }}</a>
+                                    </li>
                                 @endforeach
                             </ul>
                         </div>
@@ -296,6 +312,7 @@
 
                     </aside>
                 </div>
+
             </div>
         </div>
     </section>
