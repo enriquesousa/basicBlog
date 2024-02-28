@@ -108,6 +108,10 @@ Route::controller(FooterController::class)->group(function () {
 Route::controller(ContactController::class)->group(function () {
     Route::get('/contact/form', 'ContactForm')->name('contact.form');
     Route::post('/store/message', 'StoreMessage')->name('store.message');
+
+    Route::get('/admin/contact/message', 'AdminContactMessage')->name('admin.contact.message');
+    Route::get('/admin/contact/details/{id}', 'AdminContactDetails')->name('admin.contact.details');
+    Route::get('/delete/contact/message/{id}', 'DeleteContactMessage')->name('delete.contact.message');
 });
 
 

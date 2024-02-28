@@ -51,20 +51,20 @@
 
                     <div class="row">
                         <div class="col-md-6">
-                            <input name="name" type="text" placeholder="Entre su Nombre">
+                            <input name="name" type="text" placeholder="Entre su Nombre" required>
                         </div>
                         <div class="col-md-6">
-                            <input name="email" type="email" placeholder="Entre su correo electrónico">
+                            <input name="email" type="email" placeholder="Entre su correo electrónico" required>
                         </div>
                         <div class="col-md-6">
-                            <input name="subject" type="text" placeholder="Entre su Asunto">
+                            <input name="subject" type="text" placeholder="Entre su Asunto" required>
                         </div>
                         <div class="col-md-6">
                             <input name="phone" type="text" placeholder="Entre su Teléfono">
                         </div>
                     </div>
 
-                    <textarea name="message" id="message" placeholder="Entre su Mensaje"></textarea>
+                    <textarea name="message" id="message" placeholder="Entre su Mensaje" required></textarea>
 
 
                     <button type="submit" class="btn">send massage</button>

@@ -99,6 +99,21 @@
 					"label": "usar target blank para abrir otra pesatña"
 				}
 			]
+		},
+		{
+			"path": "resources/views/admin/contact/index.blade.php",
+			"bookmarks": [
+				{
+					"line": 64,
+					"column": 86,
+					"label": "trim en blade"
+				},
+				{
+					"line": 77,
+					"column": 64,
+					"label": "ventana modal para ver detalles no implementada"
+				}
+			]
 		}
 	]
 }

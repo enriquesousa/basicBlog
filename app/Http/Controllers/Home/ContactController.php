@@ -45,5 +45,33 @@ class ContactController extends Controller
 
     }
 
+    // AdminContactMessage
+    public function AdminContactMessage(){
+        $contact = Contact::all();
+        return view('admin.contact.index',compact('contact'));
+    }
+
+
+    // AdminContactDetails
+    public function AdminContactDetails($id){
+        $contact = Contact::findOrFail($id);
+        return view('admin.contact.details',compact('contact'));
+    }
+
+
+    // DeleteContactMessage
+    public function DeleteContactMessage($id){
+
+        Contact::findOrFail($id)->delete();
+
+        $notification = array(
+            'message' => 'Mensaje eliminada correctamente',
+            'alert-type' => 'success'
+        );
+        
+        return redirect()->back()->with($notification);
+
+    }
+
 
 }

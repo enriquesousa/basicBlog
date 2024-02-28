@@ -110,6 +110,18 @@
                     </ul>
                 </li>
 
+                <!-- Leer Mensajes de Contact Form -->
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-suitcase-line"></i>
+                        <span>Forma de Contacto</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('admin.contact.message') }}">Leer Mensajes</a></li>
+                    </ul>
+                </li>
+
+
                
 
                 <!-- * PAGES -->
