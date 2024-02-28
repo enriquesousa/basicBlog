@@ -107,6 +107,7 @@ Route::controller(FooterController::class)->group(function () {
 
 Route::controller(ContactController::class)->group(function () {
     Route::get('/contact/form', 'ContactForm')->name('contact.form');
+    Route::post('/store/message', 'StoreMessage')->name('store.message');
 });
 
 
