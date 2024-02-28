@@ -20,11 +20,14 @@
 
                                     <li><a href="services-details.html">Services</a></li>
 
-                                    <li class="menu-item-has-children"><a href="#">Portfolio</a>
+                                    {{-- <li class="menu-item-has-children"><a href="#">Portafolio</a>
                                         <ul class="sub-menu">
-                                            <li><a href="portfolio.html">Portfolio</a></li>
-                                            <li><a href="portfolio-details.html">Portfolio Details</a></li>
+                                            <li><a href="{{ route('home.portfolio') }}">Portafolio</a></li>
+                                            <li><a href="portfolio-details.html">Detalles</a></li>
                                         </ul>
+                                    </li> --}}
+
+                                    <li class="{{ request()->routeIs('home.portfolio') ? 'active' : '' }}"><a href="{{ route('home.portfolio') }}">Portafolio</a>
                                     </li>
 
                                     <li class="{{ request()->routeIs('home.blog') ? 'active' : '' }}"><a href="{{ route('home.blog') }}">Blogs</a>

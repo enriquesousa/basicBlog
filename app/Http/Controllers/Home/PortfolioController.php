@@ -158,6 +158,16 @@ class PortfolioController extends Controller
     }
 
     
+    // *****************
+    // Para el Frontend
+    // *****************
+
+    // HomePortfolio
+    public function HomePortfolio(){
+        $allPortfolios = Portfolio::orderBy('id', 'DESC')->get();
+        return view('frontend.home_all_portfolio', compact('allPortfolios'));
+    }
+
 
 
 }

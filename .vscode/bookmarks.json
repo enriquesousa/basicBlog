@@ -67,6 +67,11 @@
 					"line": 26,
 					"column": 30,
 					"label": "relacion"
+				},
+				{
+					"line": 32,
+					"column": 50,
+					"label": "getter en modelo para trim la descripcion"
 				}
 			]
 		},
@@ -112,6 +117,26 @@
 					"line": 77,
 					"column": 64,
 					"label": "ventana modal para ver detalles no implementada"
+				}
+			]
+		},
+		{
+			"path": "resources/views/frontend/home_all_portfolio.blade.php",
+			"bookmarks": [
+				{
+					"line": 68,
+					"column": 75,
+					"label": "trim description in portfolio blade"
+				}
+			]
+		},
+		{
+			"path": "resources/views/frontend/category_posts.blade.php",
+			"bookmarks": [
+				{
+					"line": 58,
+					"column": 71,
+					"label": "trim description"
 				}
 			]
 		}
