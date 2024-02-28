@@ -28,11 +28,9 @@
                                     </li>
 
                                     <li class="{{ request()->routeIs('home.blog') ? 'active' : '' }}"><a href="{{ route('home.blog') }}">Blogs</a>
-                                        
                                     </li>
-                                
 
-                                    <li><a href="contact.html">contact me</a></li>
+                                    <li class="{{ request()->routeIs('contact.form') ? 'active' : '' }}"><a href="{{ route('contact.form') }}">Contactarme</a></li>
 
                                 </ul>
                             </div>
