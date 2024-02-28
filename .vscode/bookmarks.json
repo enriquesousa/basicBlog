@@ -89,6 +89,16 @@
 					"label": "carbon date en vista"
 				}
 			]
+		},
+		{
+			"path": "resources/views/frontend/body/footer.blade.php",
+			"bookmarks": [
+				{
+					"line": 42,
+					"column": 84,
+					"label": "usar target blank para abrir otra pesatña"
+				}
+			]
 		}
 	]
 }
