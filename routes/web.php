@@ -11,6 +11,7 @@ use App\Http\Controllers\Home\BlogCategoryController;
 use App\Http\Controllers\Home\BlogController;
 use App\Http\Controllers\Home\FooterController;
 use App\Http\Controllers\Home\ContactController;
+use App\Http\Controllers\Demo\DemoController;
 
 
 /*
@@ -24,9 +25,9 @@ use App\Http\Controllers\Home\ContactController;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.index');  
-})->name('home');
+// Route::get('/', function () {
+//     return view('frontend.index');  
+// })->name('home');
 
 Route::get('/dashboard', function () {
     return view('admin.index');
@@ -40,15 +41,29 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::controller(AdminController::class)->group(function () {
-    Route::get('/admin/logout', 'AdminDestroy')->name('admin.logout');
-    Route::get('/admin/view/profile', 'ViewProfile')->name('admin.view.profile');
-    Route::get('/admin/edit/profile', 'EditProfile')->name('admin.edit.profile');
-    Route::post('/admin/store/profile', 'StoreProfile')->name('admin.store.profile');
 
-    Route::get('/admin/change/password', 'ChangePassword')->name('admin.change.password');
-    Route::post('/admin/update/password', 'UpdatePassword')->name('admin.update.password');
+Route::controller(DemoController::class)->group(function () {
+    Route::get('/', 'HomeMain')->name('home');
+    
 });
+
+
+// Admin Controller Routes
+Route::middleware(['auth'])->group(function () {
+
+    Route::controller(AdminController::class)->group(function () {
+        Route::get('/admin/logout', 'AdminDestroy')->name('admin.logout');
+        Route::get('/admin/view/profile', 'ViewProfile')->name('admin.view.profile');
+        Route::get('/admin/edit/profile', 'EditProfile')->name('admin.edit.profile');
+        Route::post('/admin/store/profile', 'StoreProfile')->name('admin.store.profile');
+    
+        Route::get('/admin/change/password', 'ChangePassword')->name('admin.change.password');
+        Route::post('/admin/update/password', 'UpdatePassword')->name('admin.update.password');
+    });
+    
+});
+
+
 
 Route::controller(HomeSliderController::class)->group(function () {
     Route::get('/home/slide', 'HomeSlider')->name('home.slide');
