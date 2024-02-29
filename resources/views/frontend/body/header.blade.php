@@ -1,3 +1,8 @@
+@php
+    $ruta = Route::current()->getName();
+@endphp
+{{-- <dd>{{ $ruta }}</dd> --}}
+
 <!-- header-area -->
 <header>
     <div id="sticky-header" class="menu__area transparent-header">
@@ -14,9 +19,9 @@
                             <div class="navbar__wrap main__menu d-none d-xl-flex">
                                 <ul class="navigation">
 
-                                    <li class="{{ request()->routeIs('home') ? 'active' : '' }}"><a href="{{ route('home') }}">Home</a></li>
+                                    <li class="{{ ($ruta == 'home') ? 'active' : '' }}"><a href="{{ route('home') }}">Home</a></li>
 
-                                    <li class="{{ request()->routeIs('home.about') ? 'active' : '' }}"><a href="{{ route('home.about') }}">About</a></li>
+                                    <li class="{{ ($ruta == 'home.about') ? 'active' : '' }}"><a href="{{ route('home.about') }}">About</a></li>
 
                                     <li><a href="services-details.html">Services</a></li>
 
@@ -27,13 +32,13 @@
                                         </ul>
                                     </li> --}}
 
-                                    <li class="{{ request()->routeIs('home.portfolio') ? 'active' : '' }}"><a href="{{ route('home.portfolio') }}">Portafolio</a>
+                                    <li class="{{ ($ruta == 'home.portfolio') ? 'active' : '' }}"><a href="{{ route('home.portfolio') }}">Portafolio</a>
                                     </li>
 
-                                    <li class="{{ request()->routeIs('home.blog') ? 'active' : '' }}"><a href="{{ route('home.blog') }}">Blogs</a>
+                                    <li class="{{ ($ruta == 'home.blog') ? 'active' : '' }}"><a href="{{ route('home.blog') }}">Blogs</a>
                                     </li>
 
-                                    <li class="{{ request()->routeIs('contact.form') ? 'active' : '' }}"><a href="{{ route('contact.form') }}">Contactarme</a></li>
+                                    <li class="{{ ($ruta == 'contact.form') ? 'active' : '' }}"><a href="{{ route('contact.form') }}">Contactarme</a></li>
 
                                 </ul>
                             </div>
