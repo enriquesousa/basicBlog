@@ -124,7 +124,7 @@
 			"path": "resources/views/frontend/home_all_portfolio.blade.php",
 			"bookmarks": [
 				{
-					"line": 68,
+					"line": 71,
 					"column": 75,
 					"label": "trim description in portfolio blade"
 				}
@@ -134,7 +134,7 @@
 			"path": "resources/views/frontend/category_posts.blade.php",
 			"bookmarks": [
 				{
-					"line": 58,
+					"line": 62,
 					"column": 71,
 					"label": "trim description"
 				}

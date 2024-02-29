@@ -1,6 +1,10 @@
 @extends('frontend.main_master')
 @section('main')
 
+@section('title')
+basicBlog | Home | EsWeb
+@endsection
+
 <!-- main-area -->
 <main>
 

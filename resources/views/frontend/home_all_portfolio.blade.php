@@ -1,6 +1,9 @@
 @extends('frontend.main_master')
 @section('main')
 
+@section('title')
+basicBlog | Portafolio | EsWeb
+@endsection
 
 <!-- main-area -->
 <main>
