@@ -56,7 +56,6 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/admin/view/profile', 'ViewProfile')->name('admin.view.profile');
         Route::get('/admin/edit/profile', 'EditProfile')->name('admin.edit.profile');
         Route::post('/admin/store/profile', 'StoreProfile')->name('admin.store.profile');
-    
         Route::get('/admin/change/password', 'ChangePassword')->name('admin.change.password');
         Route::post('/admin/update/password', 'UpdatePassword')->name('admin.update.password');
     });
@@ -93,7 +92,6 @@ Route::controller(PortfolioController::class)->group(function () {
     Route::get('/details/portfolio/{id}', 'DetailsPortfolio')->name('portfolio.details');
 
     Route::get('/home/portfolio', 'HomePortfolio')->name('home.portfolio');
-    
 });
 
 Route::controller(BlogCategoryController::class)->group(function () {
