@@ -72,8 +72,13 @@ basicBlog | Blogs | EsWeb
                         </div>
                     @endforeach
 
-                    {{-- pagination --}}
+                    {{-- default pagination de Laravel --}}
                     <div class="pagination-wrap">
+                        {{ $allBlogs->links() }}
+                    </div>
+
+                    {{-- pagination --}}
+                    {{-- <div class="pagination-wrap">
                         <nav aria-label="Page navigation example">
                             <ul class="pagination">
                                 <li class="page-item"><a class="page-link" href="#"><i class="far fa-long-arrow-left"></i></a></li>
@@ -84,7 +89,7 @@ basicBlog | Blogs | EsWeb
                                 <li class="page-item"><a class="page-link" href="#"><i class="far fa-long-arrow-right"></i></a></li>
                             </ul>
                         </nav>
-                    </div>
+                    </div> --}}
 
                 </div>
 
