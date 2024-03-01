@@ -154,9 +154,14 @@
 			"path": "resources/views/admin/blog_category/add_blog_category.blade.php",
 			"bookmarks": [
 				{
-					"line": 43,
+					"line": 46,
 					"column": 63,
 					"label": "valiadtion mostrar error en vista"
+				},
+				{
+					"line": 77,
+					"column": 42,
+					"label": "JS para el manejo de validaciones"
 				}
 			]
 		},
