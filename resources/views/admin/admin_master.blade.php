@@ -218,6 +218,10 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{ asset('backend/assets/js/code.js') }}"></script>
 
+    {{-- Para Validar Formularios --}}
+    <script src="{{ asset('backend/assets/js/validate.min.js') }}"></script>
+
+
     <!-- Bootstrap Tagsinput js, para los tags de las publicaciones, lo uso en resources/views/admin/blogs/add_blog.blade.php -->
     <script src="https://cdn.jsdelivr.net/bootstrap.tagsinput/0.8.0/bootstrap-tagsinput.min.js" ></script>
 

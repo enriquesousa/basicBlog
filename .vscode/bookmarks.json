@@ -139,6 +139,36 @@
 					"label": "trim description"
 				}
 			]
+		},
+		{
+			"path": "app/Http/Controllers/Home/BlogCategoryController.php",
+			"bookmarks": [
+				{
+					"line": 31,
+					"column": 27,
+					"label": "custom message in validation"
+				}
+			]
+		},
+		{
+			"path": "resources/views/admin/blog_category/add_blog_category.blade.php",
+			"bookmarks": [
+				{
+					"line": 43,
+					"column": 63,
+					"label": "valiadtion mostrar error en vista"
+				}
+			]
+		},
+		{
+			"path": "resources/views/admin/admin_change_password.blade.php",
+			"bookmarks": [
+				{
+					"line": 19,
+					"column": 52,
+					"label": "validation checar errores antes de los campos"
+				}
+			]
 		}
 	]
 }

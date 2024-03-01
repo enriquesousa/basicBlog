@@ -24,14 +24,14 @@ class BlogCategoryController extends Controller
     // StoreBlogCategory
     public function StoreBlogCategory(Request $request){
 
-        $request->validate(
-            [
-                'blog_category' => 'required',
-            ],
-            [
-                'blog_category.required' => 'El nombre de la categoría es requerido',
-            ]
-        );
+        // $request->validate(
+        //     [
+        //         'blog_category' => 'required',
+        //     ],
+        //     [
+        //         'blog_category.required' => 'El nombre de la categoría es requerido',
+        //     ]
+        // );
 
 
         BlogCategory::insert([
