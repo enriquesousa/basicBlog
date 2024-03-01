@@ -42,27 +42,25 @@
 
                                 <tbody>
 
-                                    @php($i = 1)
-                                    @foreach ($blogCategories as $item)
-                                        <tr>
+                                    @foreach ($blogCategories as $key => $item)
 
+                                        <tr>
                                             {{-- Serie --}}
-                                            <td>{{ $i++ }}</td>
+                                            <td>{{ $key+1 }}</td>
 
                                             {{-- Categoría --}}
                                             <td>{{ $item->blog_category }}</td>
 
                                             <td>
-
                                                 {{-- Edit --}}
                                                 <a href="{{ route('edit.blog.category', $item->id) }}" class="btn btn-info sm" title="Edit Data"><i class="fas fa-edit"></i></a>
                                                 
                                                 {{-- Delete --}}
                                                 <a href="{{ route('delete.blog.category', $item->id) }}" class="btn btn-danger sm" title="Delete Data" id="delete"><i class="fas fa-trash-alt"></i></a>
-
                                             </td>
                                             
                                         </tr>
+
                                     @endforeach
 
                                 </tbody>
