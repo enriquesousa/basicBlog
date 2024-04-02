@@ -19,7 +19,11 @@
                             <form method="POST" action="{{ route('update.slide') }}" enctype="multipart/form-data">
                                 @csrf
 
+                                {{-- ID --}}
                                 <input type="hidden" name="id" value="{{ $homeSlide->id }}">
+
+                                {{-- old imagen --}}
+                                <input type="hidden" name="old_image" value="{{ $homeSlide->home_slide }}">
 
                                 {{-- Title --}}
                                 <div class="row mb-3">
@@ -76,8 +80,6 @@
                         </div>
                     </div>
                 </div>
-
-
 
             </div>
 

@@ -1,6 +1,15 @@
 @extends('frontend.main_master')
 @section('main')
 
+@section('title')
+basicBlog | About | EsWeb
+@endsection
+
+{{-- @php
+    $nombre = request()->routeIs('home.about');
+    dd($nombre);
+@endphp --}}
+
 <!-- main-area -->
 <main>
 

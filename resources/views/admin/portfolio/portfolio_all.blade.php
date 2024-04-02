@@ -1,5 +1,6 @@
 @extends('admin.admin_master')
 @section('admin')
+
     <div class="page-content">
         <div class="container-fluid">
 
@@ -10,10 +11,7 @@
                         <h4 class="mb-sm-0">Lista <strong>Portafolios</strong></h4>
 
                         <div class="page-title-right">
-                            {{-- <ol class="breadcrumb m-0">
-                            <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
-                            <li class="breadcrumb-item active">Data Tables</li>
-                        </ol> --}}
+                            <a href="{{ route('add.portfolio') }}" class="btn btn-success waves-effect waves-light"><i class="fas fa-plus-circle"></i> Agregar Portafolio</a>
                         </div>
 
                     </div>
@@ -26,8 +24,8 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <h4 class="card-title">Lata Datos Portafolios</h4>
-                            <p class="card-title-desc">Lista datos portafolios en el frontend.</p>
+                            <h4 class="card-title">Lista datos del <strong>Portafolio</strong></h4>
+                            <p class="card-title-desc">Lista datos del <code>portafolio</code> en el frontend.</p>
 
                             <table id="datatable" class="table table-bordered dt-responsive nowrap"
                                 style="border-collapse: collapse; border-spacing: 0; width: 100%;">
@@ -63,10 +61,10 @@
                                             <td>
 
                                                 {{-- Edit --}}
-                                                <a href="{{ route('multi.image.edit', $item->id) }}" class="btn btn-info sm" title="Edit Data"><i class="fas fa-edit"></i></a>
+                                                <a href="{{ route('edit.portfolio', $item->id) }}" class="btn btn-info sm" title="Edit Data"><i class="fas fa-edit"></i></a>
                                                 
                                                 {{-- Delete --}}
-                                                <a href="{{ route('multi.image.delete', $item->id) }}" class="btn btn-danger sm" title="Delete Data" id="delete"><i class="fas fa-trash-alt"></i></a>
+                                                <a href="{{ route('delete.portfolio', $item->id) }}" class="btn btn-danger sm" title="Delete Data" id="delete"><i class="fas fa-trash-alt"></i></a>
 
                                             </td>
                                             

@@ -33,11 +33,14 @@ class HomeSliderController extends Controller
     {
 
         $slide_id = $request->id;
+        $imagenAnterior = $request->old_image;
 
         // Si hay imagen update con la imagen
         if ($request->file('home_slide')) {
 
             $imagen = $request->file('home_slide');
+
+            unlink(public_path($imagenAnterior)); // para borrar la imagen anterior
             $name_gen = hexdec(uniqid()) . '.' . $imagen->getClientOriginalExtension();
 
             // Creamos un objeto Image a partir de Intervention Image

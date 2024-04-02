@@ -14,6 +14,166 @@
 					"label": "unlink en delete image"
 				}
 			]
+		},
+		{
+			"path": "app/Http/Controllers/Home/PortfolioController.php",
+			"bookmarks": [
+				{
+					"line": 30,
+					"column": 27,
+					"label": "custom validation"
+				},
+				{
+					"line": 87,
+					"column": 51,
+					"label": "unlink image"
+				}
+			]
+		},
+		{
+			"path": "resources/views/frontend/portfolio_details.blade.php",
+			"bookmarks": [
+				{
+					"line": 47,
+					"column": 28,
+					"label": "para desplegar html text in p tag"
+				}
+			]
+		},
+		{
+			"path": "resources/views/admin/blogs/add_blog.blade.php",
+			"bookmarks": [
+				{
+					"line": 7,
+					"column": 27,
+					"label": "CSS en vista tags"
+				}
+			]
+		},
+		{
+			"path": "resources/views/admin/admin_master.blade.php",
+			"bookmarks": [
+				{
+					"line": 160,
+					"column": 120,
+					"label": "toastr toster js en plantilla master"
+				}
+			]
+		},
+		{
+			"path": "app/Models/Blog.php",
+			"bookmarks": [
+				{
+					"line": 26,
+					"column": 30,
+					"label": "relacion"
+				},
+				{
+					"line": 32,
+					"column": 50,
+					"label": "getter en modelo para trim la descripcion"
+				}
+			]
+		},
+		{
+			"path": "resources/views/admin/blogs/edit_blog.blade.php",
+			"bookmarks": [
+				{
+					"line": 61,
+					"column": 53,
+					"label": "condicion para las opciones del select selected value"
+				}
+			]
+		},
+		{
+			"path": "resources/views/frontend/home_all/home_blog.blade.php",
+			"bookmarks": [
+				{
+					"line": 21,
+					"column": 28,
+					"label": "carbon date en vista"
+				}
+			]
+		},
+		{
+			"path": "resources/views/frontend/body/footer.blade.php",
+			"bookmarks": [
+				{
+					"line": 42,
+					"column": 84,
+					"label": "usar target blank para abrir otra pesatña"
+				}
+			]
+		},
+		{
+			"path": "resources/views/admin/contact/index.blade.php",
+			"bookmarks": [
+				{
+					"line": 64,
+					"column": 86,
+					"label": "trim en blade"
+				},
+				{
+					"line": 77,
+					"column": 64,
+					"label": "ventana modal para ver detalles no implementada"
+				}
+			]
+		},
+		{
+			"path": "resources/views/frontend/home_all_portfolio.blade.php",
+			"bookmarks": [
+				{
+					"line": 71,
+					"column": 75,
+					"label": "trim description in portfolio blade"
+				}
+			]
+		},
+		{
+			"path": "resources/views/frontend/category_posts.blade.php",
+			"bookmarks": [
+				{
+					"line": 62,
+					"column": 71,
+					"label": "trim description"
+				}
+			]
+		},
+		{
+			"path": "app/Http/Controllers/Home/BlogCategoryController.php",
+			"bookmarks": [
+				{
+					"line": 31,
+					"column": 27,
+					"label": "custom message in validation"
+				}
+			]
+		},
+		{
+			"path": "resources/views/admin/blog_category/add_blog_category.blade.php",
+			"bookmarks": [
+				{
+					"line": 46,
+					"column": 63,
+					"label": "valiadtion mostrar error en vista"
+				},
+				{
+					"line": 77,
+					"column": 42,
+					"label": "JS para el manejo de validaciones"
+				}
+			]
+		},
+		{
+			"path": "resources/views/admin/admin_change_password.blade.php",
+			"bookmarks": [
+				{
+					"line": 19,
+					"column": 52,
+					"label": "validation checar errores antes de los campos"
+				}
+			]
 		}
 	]
 }
