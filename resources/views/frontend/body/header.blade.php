@@ -23,7 +23,7 @@
 
                                     <li class="{{ ($ruta == 'home.about') ? 'active' : '' }}"><a href="{{ route('home.about') }}">About</a></li>
 
-                                    <li><a href="services-details.html">Services</a></li>
+                                    {{-- <li><a href="services-details.html">Services</a></li> --}}
 
                                     {{-- <li class="menu-item-has-children"><a href="#">Portafolio</a>
                                         <ul class="sub-menu">
